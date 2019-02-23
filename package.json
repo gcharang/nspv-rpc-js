@@ -28,7 +28,7 @@
     "gulp-standard": "^11.0.0",
     "gulp-mocha": "^6.0.0",
     "istanbul": "^0.4.0",
-    "mocha": "^5.0.0",
+    "mocha": "^6.0.1",
     "nock": "^10.0.0",
     "standard": "^11.0.0",
     "mocha-junit-reporter": "^1.0"
