@@ -3,7 +3,7 @@
 [![Circle CI](https://circleci.com/gh/drazisil/node-bitcoin-rpc.svg?style=shield)](https://circleci.com/gh/drazisil/node-bitcoin-rpc) [![Coverage Status](https://coveralls.io/repos/drazisil/node-bitcoin-rpc/badge.svg?branch=master&service=github)](https://coveralls.io/github/drazisil/node-bitcoin-rpc?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/drazisil/node-bitcoin-rpc.svg)](https://greenkeeper.io/)
 
-nodejs json-rpc for bitcoin
+nodejs json-rpc for komodo
 
 ## Instructions:
 
@@ -16,16 +16,16 @@ nodejs json-rpc for bitcoin
 ## Example:
 
 ```
-var bitcoin_rpc = require('node-bitcoin-rpc')
+var komodo_rpc = require('node-komodo-rpc')
 
-bitcoin_rpc.init('host', port, 'rpc_username', rpc_pass)
-bitcoin_rpc.call('getbalance', [], function (err, res) {
+komodo_rpc.init('host', port, 'rpc_username', rpc_pass)
+komodo_rpc.call('getbalance', [], function (err, res) {
   if (err) {
-    let errMsg = "Error when calling bitcoin RPC: " + err;
+    let errMsg = "Error when calling komodo RPC: " + err;
     console.log(errMsg);
     throw new Error(errMsg);
   } else if (res.error) {
-    let errMsg = "Error received by bitcoin RPC: " + res.error.message + " (" + res.error.code + ")";
+    let errMsg = "Error received by komodo RPC: " + res.error.message + " (" + res.error.code + ")";
     console.log(errMsg);
     throw new Error(errMsg);
   } else {
