@@ -1,6 +1,6 @@
-# node-bitcoin-rpc
+# node-komodo-rpc
 
-[![Circle CI](https://circleci.com/gh/gcharang/node-komodo-rpc.svg?style=shield)](https://circleci.com/gh/drazisil/node-bitcoin-rpc) 
+[![Circle CI](https://circleci.com/gh/gcharang/node-komodo-rpc.svg?style=shield)](https://circleci.com/gh/gcharang/node-komodo-rpc) 
 
 
 nodejs json-rpc for komodo
