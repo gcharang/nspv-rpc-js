@@ -16,11 +16,11 @@
     "js",
     "javascript"
   ],
-  "author": "Joseph W Becher <jwbecher@drazisil.com>",
-  "contributors": [{
+  "author": {
     "name": "gcharang",
     "email": "gcharang@komodoplatform.com"
-  }],
+  },
+  "contributors": ["Joseph W Becher <jwbecher@drazisil.com>"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gcharang/node-komodo-rpc/issues"
