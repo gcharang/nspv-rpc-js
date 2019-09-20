@@ -1,6 +1,6 @@
 {
   "name": "node-komodo-rpc",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "nodejs json-rpc for komodo",
   "main": "./lib/index.js",
   "scripts": {
