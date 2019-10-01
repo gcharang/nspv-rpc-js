@@ -8,11 +8,9 @@ nodejs json-rpc for Komodo and Smart Chains.
 
 1. `require()` it
 2. call `.init()` with a JS object containing the credentials or a way to get the credentials as an argument to initiate a RPC connection.
-
-- datadir Ex: `{ datadir: "/home/username/.komodo/LABS" }`
-- name Ex: `{ name: "Rick" }`
-- conffile Ex: `{ conffile: "/home/username/.komodo/MORTY/MORTY.conf" }`
-
+   - datadir Ex: `{ datadir: "/home/username/.komodo/LABS" }`
+   - name Ex: `{ name: "Rick" }`
+   - conffile Ex: `{ conffile: "/home/username/.komodo/MORTY/MORTY.conf" }`
 3. call `.call()` with the method, params and callback (the callback takes (err, result))
 
 - optional: call `.setTimeout()` with the number of milliseconds to wait for a response from the blockchain daemon if `500` isn't enough
