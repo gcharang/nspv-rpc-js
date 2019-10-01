@@ -22,9 +22,9 @@ nodejs json-rpc for Komodo and Smart Chains.
 Passing the credentials directly
 
 ```js
-var rpc = require("node-komodo-rpc");
+const rpc = require("node-komodo-rpc");
 
-creds = {
+let creds = {
   rpchost: "localhost",
   rpcport: 7771,
   rpcuser: "user3141556977",
@@ -79,7 +79,7 @@ rpc.init({
 });
 ```
 
-Calling the `init` function with no arguments is equivalent to passing the argument `{name: 'komodo'}`
+Calling the `init` function with no arguments is equivalent to passing the argument `{name: "komodo"}`
 
 ```js
 rpc.init();
@@ -88,15 +88,26 @@ rpc.init();
 To see the values being used currently
 
 ```js
-console.log(rpc.NAME); // "NAME" is the name of the Blockchain; more accurately, it is the name of the conf file
-console.log(rpc.HOSTNAME); // the address at which the RPC server (blockchain daemon) is listening for connections
-console.log(rpc.PORT); // the port at which the RPC server (blockchain daemon) is listening for connections
-console.log(rpc.USERNAME); // the username allowed to send RPC requests to the blockchain daemon
-console.log(rpc.PASSWORD); // the password to authenticate the RPC requests to the blockchain daemon
-console.log(rpc.DATADIR); // the data directory being used by the blockchain daemon; more accurately, this is the directory containing the conf file
-console.log(rpc.CONFFILE); // the file containing the configuration settings of the blockchain daemon
-console.log(rpc.TIMEOUT); // the amount of time (in milli seconds) to wait for a response from the blockchain daemon
+console.log(rpc.NAME);
+console.log(rpc.HOSTNAME);
+console.log(rpc.PORT);
+console.log(rpc.USERNAME);
+console.log(rpc.PASSWORD);
+console.log(rpc.DATADIR);
+console.log(rpc.CONFFILE);
+console.log(rpc.TIMEOUT);
 ```
+
+Descriptions of the exported values
+
+- `NAME` is the name of the Blockchain; more accurately, it is the name of the conf file
+- `HOSTNAME` the address at which the RPC server (blockchain daemon) is listening for connections
+- `PORT` is the port at which the RPC server (blockchain daemon) is listening for connections
+- `USERNAME` is the username allowed to send RPC requests to the blockchain daemon
+- `PASSWORD` is the password to authenticate the RPC requests to the blockchain daemon
+- `DATADIR` is the data directory being used by the blockchain daemon; more accurately, this is the directory containing the conf file
+- `CONFFILE` is the file containing the configuration settings of the blockchain daemon
+- `TIMEOUT` is the amount of time (in milli seconds) to wait for a response from the blockchain daemon
 
 ## Defaults
 
@@ -107,8 +118,8 @@ The defaults before the `.init()` function is called:
 - rpcuser: "komodorpc"
 - rpcpassword: "foo"
 - name: "komodo"
-- datadir: UNIX: "/home/username/.komodo/" or MacOS: "/home/username/Library/Application Support/Komodo" or Windows: "%appdata%\Komodo"
-- conffile: UNIX: "/home/username/.komodo/komodo.conf" or MacOS: "/home/username/Library/Application Support/Komodo/komodo.conf" or Windows: "%appdata%\Komodo\komodo.conf"
+- datadir: UNIX: "/home/username/.komodo/" or MacOS: "/home/username/Library/Application Support/Komodo" or Windows: "%appdata%\\Komodo"
+- conffile: UNIX: "/home/username/.komodo/komodo.conf" or MacOS: "/home/username/Library/Application\ Support/Komodo/komodo.conf" or Windows: "%appdata%\\Komodo\\komodo.conf"
 - connection timeout: 500 ms
 
 ### creds
