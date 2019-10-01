@@ -83,7 +83,7 @@ Calling the `init` function with no arguments is equivalent to passing the argum
 rpc.init();
 ```
 
-To see the values being used currently
+To inspect the values being used 
 
 ```js
 console.log(rpc.NAME);
@@ -96,7 +96,7 @@ console.log(rpc.CONFFILE);
 console.log(rpc.TIMEOUT);
 ```
 
-Descriptions of the exported values
+Descriptions of the keys
 
 - `NAME` is the name of the Blockchain; more accurately, it is the name of the conf file
 - `HOSTNAME` the address at which the RPC server (blockchain daemon) is listening for connections
@@ -116,8 +116,8 @@ The defaults before the `.init()` function is called:
 - rpcuser: "komodorpc"
 - rpcpassword: "foo"
 - name: "komodo"
-- datadir: UNIX: "/home/username/.komodo/" or MacOS: "/home/username/Library/Application Support/Komodo" or Windows: "%appdata%\\Komodo"
-- conffile: UNIX: "/home/username/.komodo/komodo.conf" or MacOS: "/home/username/Library/Application\ Support/Komodo/komodo.conf" or Windows: "%appdata%\\Komodo\\komodo.conf"
+- datadir: UNIX: `/home/username/.komodo/` or MacOS: `/home/username/Library/Application Support/Komodo` or Windows: `%appdata%\\Komodo`
+- conffile: UNIX: `/home/username/.komodo/komodo.conf` or MacOS: `/home/username/Library/Application\ Support/Komodo/komodo.conf` or Windows: `%appdata%\\Komodo\\komodo.conf`
 - connection timeout: 500 ms
 
 ### creds
