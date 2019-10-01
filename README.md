@@ -1,45 +1,116 @@
 # node-komodo-rpc
 
-[![Circle CI](https://circleci.com/gh/gcharang/node-komodo-rpc.svg?style=shield)](https://circleci.com/gh/gcharang/node-komodo-rpc) 
+[![Circle CI](https://circleci.com/gh/gcharang/node-komodo-rpc.svg?style=shield)](https://circleci.com/gh/gcharang/node-komodo-rpc)
 
+nodejs json-rpc for Komodo and Smart Chains.
 
-nodejs json-rpc for komodo
-
-## Instructions:
+## Instructions
 
 1. `require()` it
-2. call `.init()` with host, port, username, password as args
-3. call `.call()` with the method, param and callback (the callback takes (err, result))
+2. call `.init()` with a JS object containing the credentials or a way to get the credentials as an argument to initiate a RPC connection.
 
-* optional: call `.setTimeout()` with the number of milliseconds to wait if 500 isn't enough
+- datadir Ex: `{ datadir: "/home/username/.komodo/LABS" }`
+- name Ex: `{ name: "Rick" }`
+- conffile Ex: `{ conffile: "/home/username/.komodo/MORTY/MORTY.conf" }`
 
-## Example:
+3. call `.call()` with the method, params and callback (the callback takes (err, result))
 
-```
-var komodo_rpc = require('node-komodo-rpc')
+- optional: call `.setTimeout()` with the number of milliseconds to wait for a response from the blockchain daemon if `500` isn't enough
 
-komodo_rpc.init('host', port, 'rpc_username', rpc_pass)
-komodo_rpc.call('getbalance', [], function (err, res) {
+## Examples
+
+Passing the credentials directly
+
+```js
+var rpc = require("node-komodo-rpc");
+
+creds = {
+  rpchost: "localhost",
+  rpcport: 7771,
+  rpcuser: "user3141556977",
+  rpcpassword:
+    "pass47aac855ee75ce21a96476641556b90dab0128962d29e85920cbb8ad730d0e0307"
+};
+
+rpc.init({
+  creds
+});
+rpc.call("getinfo", [], function(err, res) {
   if (err) {
     let errMsg = "Error when calling komodo RPC: " + err;
     console.log(errMsg);
     throw new Error(errMsg);
   } else if (res.error) {
-    let errMsg = "Error received by komodo RPC: " + res.error.message + " (" + res.error.code + ")";
+    let errMsg =
+      "Error received by komodo RPC: " +
+      res.error.message +
+      " (" +
+      res.error.code +
+      ")";
     console.log(errMsg);
     throw new Error(errMsg);
   } else {
-    console.log(JSON.stringify(res.result))
+    console.log(JSON.stringify(res.result));
   }
-})
+});
 ```
 
-## Defaults:
+Passing the data directory's path
 
-* host; localhost
-* port: 8332
-* rpc_username: bitcoinrpc
-* rpc_password: foo
-* connection timeout: 500 ms
+```js
+rpc.init({
+  datadir: "/home/username/.komodo/LABS"
+});
+```
 
-.
+Passing the Name
+
+```js
+rpc.init({
+  name: "Rick"
+});
+```
+
+Passing the Conf file's path
+
+```js
+rpc.init({
+  conffile: "/home/username/.komodo/MORTY/MORTY.conf"
+});
+```
+
+Calling the `init` function with no arguments is equivalent to passing the argument `{name: 'komodo'}`
+
+```js
+rpc.init();
+```
+
+To see the values being used currently
+
+```js
+console.log(rpc.NAME); // "NAME" is the name of the Blockchain; more accurately, it is the name of the conf file
+console.log(rpc.HOSTNAME); // the address at which the RPC server (blockchain daemon) is listening for connections
+console.log(rpc.PORT); // the port at which the RPC server (blockchain daemon) is listening for connections
+console.log(rpc.USERNAME); // the username allowed to send RPC requests to the blockchain daemon
+console.log(rpc.PASSWORD); // the password to authenticate the RPC requests to the blockchain daemon
+console.log(rpc.DATADIR); // the data directory being used by the blockchain daemon; more accurately, this is the directory containing the conf file
+console.log(rpc.CONFFILE); // the file containing the configuration settings of the blockchain daemon
+console.log(rpc.TIMEOUT); // the amount of time (in milli seconds) to wait for a response from the blockchain daemon
+```
+
+## Defaults
+
+The defaults before the `.init()` function is called:
+
+- rpchost: "localhost"
+- rpcport: 7771
+- rpcuser: "komodorpc"
+- rpcpassword: "foo"
+- name: "komodo"
+- datadir: UNIX: "/home/username/.komodo/" or MacOS: "/home/username/Library/Application Support/Komodo" or Windows: "%appdata%\Komodo"
+- conffile: UNIX: "/home/username/.komodo/komodo.conf" or MacOS: "/home/username/Library/Application Support/Komodo/komodo.conf" or Windows: "%appdata%\Komodo\komodo.conf"
+- connection timeout: 500 ms
+
+### creds
+
+If the `creds` object is missing the keys: `rpchost` or `rpcport`, their default values are used: `localhost` and `7771` respectively. When the `creds` object is passed, `NAME`, `DATADIR` and `CONFFILE` are set to be `undefined`
