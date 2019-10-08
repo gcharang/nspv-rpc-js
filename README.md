@@ -52,7 +52,7 @@ Passing the data directory's path
 
 ```js
 const labs = new SmartChain({
-  datadir: "/home/username/.komodo/LABS"
+  datadir: "/home/username/.komodo/RICK"
 });
 ```
 
@@ -60,7 +60,7 @@ Passing the Name
 
 ```js
 const rick = new SmartChain({
-  name: "Rick"
+  name: "labs"
 });
 ```
 
@@ -98,7 +98,7 @@ Output
 }
 ```
 
-Descriptions of the keys
+Descriptions of the properties
 
 - `NAME` is the name of the Blockchain; more accurately, it is the name of the conf file
 - `HOSTNAME` the address at which the RPC server (blockchain daemon) is listening for connections
