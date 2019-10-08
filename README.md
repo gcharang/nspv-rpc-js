@@ -2,10 +2,11 @@
 
 nodejs json-rpc for Komodo and Smart Chains, with Promises and support for multiple instances
 
-- Supports on-the-fly RPC methods using [Proxies](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
+- Supports on-the-fly RPC methods using [Proxies](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy); all the RPC methods supported by a daemon are available.
+- Supports multiple instances (different daemons) in the same program
 - Works in browser and in node
 - Very small codebase
-- Uses [axios](https://github.com/mzabriskie/axios) behind the scenes
+- Uses [axios](https://github.com/axios/axios) behind the scenes
 
 ## Instructions
 
@@ -27,9 +28,8 @@ const SmartChain = require("node-komodo-rpc");
 const creds = {
   rpchost: "localhost",
   rpcport: 7771,
-  rpcuser: "user3141556977",
-  rpcpassword:
-    "pass47aac855ee75ce21a96476641556b90dab0128962d29e85920cbb8ad730d0e0307"
+  rpcuser: "user316977",
+  rpcpassword: "pass47aac855ee750dab0128962d29e85920cbb8ad730d0e0307"
 };
 
 const komodo = new SmartChain({ creds });
