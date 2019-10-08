@@ -2,7 +2,7 @@
 
 nodejs json-rpc for Komodo and Smart Chains, with Promises and support for multiple instances
 
-- Supports on-the-fly RPC methods using [Proxies](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy); all the RPC methods supported by a daemon (Including the Antara API) are available.
+- Supports on-the-fly RPC methods using [Proxies](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy); all the RPC methods supported by a daemon (including the Antara API) are available
 - Supports multiple instances (different daemons) in the same program
 - Works in browser and in node
 - Very small codebase
