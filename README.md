@@ -36,7 +36,7 @@ const komodo = new SmartChain({ creds });
 
 console.log(komodo.config); // Prints the config being used by the komodo instance
 
-const komodoRPC = labs.rpc();
+const komodoRPC = komodo.rpc();
 
 labs.RPC.getinfo()
   .then(info => {
@@ -93,7 +93,7 @@ Output
   "PORT": "40265",
   "USERNAME": "user45765873",
   "PASSWORD": "passa8eb6941a2e7f4059d9726126d8989428f54748b94cd775",
-  "DATADIR": "/home/gcharang/.komodo/LABS/",
+  "DATADIR": "/home/<username>/.komodo/LABS/",
   "CONFFILE": "/home/<username>/.komodo/LABS/LABS.conf"
 }
 ```
