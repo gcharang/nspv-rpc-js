@@ -38,7 +38,8 @@ console.log(komodo.config); // Prints the config being used by the komodo instan
 
 const komodoRPC = komodo.rpc();
 
-labs.RPC.getinfo()
+komodoRPC
+  .getinfo()
   .then(info => {
     console.log(info);
   })
@@ -46,6 +47,16 @@ labs.RPC.getinfo()
     console.log(error);
     throw new Error(error);
   });
+
+komodoRPC
+  .listunspent(6, 9999999, [
+    "RPS3xTZCzr6aQfoMw5Bu1rpQBF6iVCWsyu",
+    "RBtNBJjWKVKPFG4To5Yce9TWWmc2AenzfZ"
+  ])
+  .then(outs => {
+    console.log(outs);
+  })
+  .catch(error => console.log(error));
 ```
 
 Passing the data directory's path
