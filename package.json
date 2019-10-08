@@ -1,10 +1,9 @@
 {
   "name": "node-komodo-rpc",
-  "version": "1.0.1",
-  "description": "nodejs json-rpc for komodo",
+  "version": "2.0.0",
+  "description": "nodejs json-rpc for Komodo and Smart Chains, with Promises and support for multiple instances",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "gulp dev"
   },
   "repository": {
     "type": "git",
@@ -13,33 +12,20 @@
   "keywords": [
     "jsonrpc",
     "komodo",
-    "js",
+    "nodejs",
     "javascript"
   ],
   "author": {
     "name": "gcharang",
     "email": "gcharang@komodoplatform.com"
   },
-  "contributors": ["Joseph W Becher <jwbecher@drazisil.com>"],
+  "contributors": ["Joseph W Becher <jwbecher@drazisil.com>", "Monty Anderson <work@montyanderson.net>"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gcharang/node-komodo-rpc/issues"
   },
   "homepage": "https://github.com/gcharang/node-komodo-rpc#readme",
-  "devDependencies": {
-    "coveralls": "^3.0.0",
-    "gulp": "^3.9.0",
-    "gulp-coveralls": "^0.1.4",
-    "gulp-istanbul": "^1.1.1",
-    "gulp-standard": "^11.0.0",
-    "gulp-mocha": "^6.0.0",
-    "istanbul": "^0.4.0",
-    "mocha": "^6.0.1",
-    "nock": "^10.0.0",
-    "standard": "^11.0.0",
-    "mocha-junit-reporter": "^1.0"
-  },
   "dependencies": {
-    "agentkeepalive": "^4.0.2"
+    "axios": "^0.18.0"
   }
 }
