@@ -62,7 +62,7 @@ komodoRPC
 Passing the data directory's path
 
 ```js
-const labs = new SmartChain({
+const rick = new SmartChain({
   datadir: "/home/username/.komodo/RICK"
 });
 ```
@@ -70,7 +70,7 @@ const labs = new SmartChain({
 Passing the Name
 
 ```js
-const rick = new SmartChain({
+const labs = new SmartChain({
   name: "labs"
 });
 ```
