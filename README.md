@@ -63,4 +63,4 @@ Descriptions of the properties
 
 ## Defaults
 
-If the `creds` object is missing the keys: `rpchost` or `rpcport`, the default values used are `localhost` and `7771` respectively
+If the `config` object is missing the keys: `rpchost` or `rpcport`, the default values used are `localhost` and `7771` respectively
