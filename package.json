@@ -1,6 +1,6 @@
 {
   "name": "komodo-rpc-js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "json-rpc for Komodo and Smart Chains, with Promises support",
   "main": "./lib/index.js",
   "scripts": {
