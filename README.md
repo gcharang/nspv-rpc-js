@@ -18,7 +18,7 @@ json-rpc for Komodo and Smart Chains, with Promises support
 ## Usage
 
 ```js
-const SmartChain = require("node-komodo-rpc");
+const SmartChain = require("komodo-rpc-js");
 
 const config = {
   rpchost: "localhost",
