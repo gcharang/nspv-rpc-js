@@ -1,10 +1,9 @@
 {
   "name": "komodo-rpc-js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "json-rpc for Komodo and Smart Chains, with Promises support",
   "main": "./lib/index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gcharang/komodo-rpc-js.git"
@@ -19,7 +18,10 @@
     "name": "gcharang",
     "email": "gcharang@komodoplatform.com"
   },
-  "contributors": ["Joseph W Becher <jwbecher@drazisil.com>", "Monty Anderson <work@montyanderson.net>"],
+  "contributors": [
+    "Joseph W Becher <jwbecher@drazisil.com>",
+    "Monty Anderson <work@montyanderson.net>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gcharang/komodo-rpc-jsissues"
