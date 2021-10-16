@@ -51,8 +51,8 @@ komodoRPC
 
 Descriptions of the properties
 
-- `HOSTNAME` the address at which the RPC server (blockchain daemon) is listening for connections
-- `PORT` is the port at which the RPC server (blockchain daemon) is listening for connections
+- `HOSTNAME` the address at which the nSPV binary is listening for connections
+- `PORT` is the port at which the nSPV binary is listening for connections
 
 ## Defaults
 
