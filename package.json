@@ -1,6 +1,6 @@
 {
   "name": "nspv-rpc-js",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "description": "json-rpc for nSPV and Smart Chains, with Promises support",
   "main": "./lib/index.js",
   "scripts": {},
