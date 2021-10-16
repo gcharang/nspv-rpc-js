@@ -1,10 +1,10 @@
-# komodo-rpc-js
+# nspv-rpc-js
 
-json-rpc for Komodo and Smart Chains, with Promises support
+json-rpc for nSPV, with Promises support
 
-- Supports on-the-fly RPC methods using [Proxies](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy); all the RPC methods supported by a daemon (including the Antara API) are available
+- Supports on-the-fly RPC methods using [Proxies](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy); all the RPC methods supported by a nSPV binary are available
 - Supports multiple instances (different daemons) in the same application
-- Works in browser and Nodejs; For the Nodejs version with datadir/conf detection support, [click here](https://www.npmjs.com/package/node-komodo-rpc)
+- Works in browser and Nodejs
 - Very small codebase
 - Uses [axios](https://github.com/axios/axios) behind the scenes
 
@@ -18,13 +18,11 @@ json-rpc for Komodo and Smart Chains, with Promises support
 ## Usage
 
 ```js
-const SmartChain = require("komodo-rpc-js");
+const SmartChain = require("nspv-rpc-js");
 
 const config = {
   rpchost: "localhost",
   rpcport: 7771,
-  rpcuser: "user316977",
-  rpcpassword: "pass47aac855ee750dab0128962d29e85920cbb8ad730d0e0307"
 };
 
 const komodo = new SmartChain({ config });
@@ -35,31 +33,26 @@ const komodoRPC = komodo.rpc();
 
 komodoRPC
   .getinfo()
-  .then(info => {
+  .then((info) => {
     console.log(info);
   })
-  .catch(error => {
+  .catch((error) => {
     console.log(error);
     throw new Error(error);
   });
 
 komodoRPC
-  .listunspent(6, 9999999, [
-    "RPS3xTZCzr6aQfoMw5Bu1rpQBF6iVCWsyu",
-    "RBtNBJjWKVKPFG4To5Yce9TWWmc2AenzfZ"
-  ])
-  .then(outs => {
-    console.log(outs);
+  .listunspent("RD47yEoA4VGriqjeiLdMVKnuE7x7xqFy9r", false, 5)
+  .then((outs) => {
+    console.log(outs.utxos.length);
   })
-  .catch(error => console.log(error));
+  .catch((error) => console.log(error));
 ```
 
 Descriptions of the properties
 
 - `HOSTNAME` the address at which the RPC server (blockchain daemon) is listening for connections
 - `PORT` is the port at which the RPC server (blockchain daemon) is listening for connections
-- `USERNAME` is the username allowed to send RPC requests to the blockchain daemon
-- `PASSWORD` is the password to authenticate the RPC requests to the blockchain daemon
 
 ## Defaults
 

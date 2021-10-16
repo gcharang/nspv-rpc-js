@@ -1,16 +1,16 @@
 {
-  "name": "komodo-rpc-js",
+  "name": "nspv-rpc-js",
   "version": "0.0.4",
-  "description": "json-rpc for Komodo and Smart Chains, with Promises support",
+  "description": "json-rpc for nSPV and Smart Chains, with Promises support",
   "main": "./lib/index.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gcharang/komodo-rpc-js.git"
+    "url": "git+https://github.com/gcharang/nspv-rpc-js.git"
   },
   "keywords": [
     "jsonrpc",
-    "komodo",
+    "nspv",
     "browser",
     "javascript"
   ],
@@ -24,10 +24,10 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gcharang/komodo-rpc-jsissues"
+    "url": "https://github.com/gcharang/nspv-rpc-js#issues"
   },
-  "homepage": "https://github.com/gcharang/komodo-rpc-js#readme",
+  "homepage": "https://github.com/gcharang/nspv-rpc-js#readme",
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.23.0"
   }
 }
